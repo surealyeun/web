@@ -1,0 +1,35 @@
+.container {
+  width: 85%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.item {
+  background-color: grey;
+  width: 100%;
+  padding-bottom: 100%;
+}
+
+@media (min-width: 576px) {
+  .item {
+    width: 100%;
+    padding-bottom: 100%;
+    transition: opacity ease 1s 0s;
+  }
+}
+@media (min-width: 768px) {
+  .item {
+    width: 50%;
+    padding-bottom: 50%;
+    transition: all ease 1s 0s;
+  }
+}
+@media (min-width: 992px) {
+  .item {
+    width: 33%;
+    padding-bottom: 33%;
+    transition: all ease 1s 0s;
+  }
+}
