@@ -7,10 +7,14 @@
     <style type="text/css">
       @import url('hamburger.css');
     </style>
+    <!-- <script src="hamburger.js"></script> -->
   </head>
   <body>
     <div class="header">
-      <div class="icon" onclick="clickHBG()">🍔</div>
+      <div class="icon">🍔</div>
+    </div>
+    <div class="menu" id="menu">
+      <div class="close">❌</div>
     </div>
     <div class="content">
       <img
@@ -38,5 +42,20 @@
         alt=""
       />
     </div>
+    <script>
+      const icon = document.querySelector('.icon');
+      const menu = document.querySelector('.menu');
+      const close = document.querySelector('.close');
+
+      icon.addEventListener('click', () => {
+        // menu.style.opacity = 1;
+        menu.style.display = 'block';
+      });
+
+      close.addEventListener('click', () => {
+        // menu.style.opacity = 0;
+        menu.style.display = 'none';
+      });
+    </script>
   </body>
 </html>
