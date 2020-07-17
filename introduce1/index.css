@@ -19,6 +19,12 @@ header {
   display: inline-block;
   width: 80%;
   margin-left: 130px;
+  display: flex;
+}
+
+.paragraph {
+  width: 45%;
+  flex-wrap: wrap;
 }
 
 .mode-btn {
