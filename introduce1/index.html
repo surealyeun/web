@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>01</title>
+    <style type="text/css">
+      @import url('index.css');
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="mode-btn light" id="mode" onclick="turnMode()"></div>
+      <h1 class="mode-name">Light</h1>
+    </header>
+    <div class="content">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam maximus
+        vitae quam nec efficitur. Fusce ut ullamcorper mi. Sed hendrerit metus
+        vitae dui lacinia blandit. Donec tempus eu dui ut tristique. Maecenas
+        quam lacus, vulputate fermentum dolor id, efficitur tempus neque.
+        Pellentesque tempus odio nec risus posuere, et luctus tellus
+        condimentum. Cras luctus blandit eleifend. Curabitur nulla nunc,
+        porttitor quis convallis at, rutrum sed dui. Lorem ipsum dolor sit amet,
+        consectetur adipiscing elit. Nullam elit eros, posuere et urna a,
+        gravida auctor felis. Aliquam eleifend et nunc vitae feugiat.
+      </p>
+      <p>
+        Nullam ipsum nulla, suscipit vitae neque in, pharetra rutrum libero.
+        Pellentesque consectetur nunc et risus varius, nec sagittis ex aliquam.
+        Etiam eget justo suscipit, ultricies lorem at, laoreet tortor. Nunc a
+        convallis massa. Mauris imperdiet tortor nec lorem semper fringilla.
+        Pellentesque habitant morbi tristique senectus et netus et malesuada
+        fames ac turpis egestas. Curabitur id varius lorem, in elementum ipsum.
+        Proin blandit tortor est, ut ornare neque sodales vitae. Maecenas nec
+        ligula non tellus sollicitudin consequat. Mauris sed semper ante,
+        fringilla porta neque. Curabitur a ipsum et sem porta finibus sed in
+        est.
+      </p>
+      <p>
+        Pellentesque urna nisl, luctus vel metus in, tincidunt auctor nulla.
+        Cras congue nunc non metus auctor finibus. Sed facilisis dictum est et
+        vehicula. Class aptent taciti sociosqu ad litora torquent per conubia
+        nostra, per inceptos himenaeos. Etiam ultricies pellentesque lacinia.
+        Maecenas sit amet finibus diam. Pellentesque pellentesque tellus velit,
+        ac condimentum dui varius at. Praesent in eleifend dolor. Morbi ut purus
+        turpis. Etiam sed libero id orci aliquet blandit. Etiam gravida, quam
+        vel vehicula dictum, lacus massa sollicitudin ex, non auctor risus
+        tellus in orci. Vestibulum molestie orci a tellus aliquet, ac fermentum
+        velit dapibus. Mauris eu justo vestibulum, posuere quam a, pulvinar
+        augue. Donec pellentesque lacus ex, vel posuere purus pharetra molestie.
+        Pellentesque semper neque sed nulla porta, eget finibus tortor blandit.
+        Nulla eu sagittis enim.
+      </p>
+      <p>
+        Donec et odio pharetra, interdum ante ut, tempus odio. Maecenas dolor
+        lorem, fermentum vitae malesuada nec, hendrerit eu dui. Proin at luctus
+        purus. Sed pellentesque velit tempor arcu tempus sagittis. Etiam in
+        bibendum felis. Sed id ante in tellus luctus ornare nec ut nulla.
+        Phasellus pellentesque dolor enim, sed venenatis nunc imperdiet in. Sed
+        pulvinar erat eros, facilisis dignissim purus bibendum eu. Aenean at
+        imperdiet mi, eu semper sapien. Mauris rutrum, risus a vehicula auctor,
+        diam massa rutrum leo, sed fermentum metus tortor lacinia arcu. Aenean
+        orci ante, posuere vel fermentum et, volutpat nec eros. Suspendisse
+        potenti. Sed viverra ipsum vitae ex convallis, et hendrerit nibh tempus.
+        Suspendisse potenti.
+      </p>
+      <p>
+        Pellentesque urna nisl, luctus vel metus in, tincidunt auctor nulla.
+        Cras congue nunc non metus auctor finibus. Sed facilisis dictum est et
+        vehicula. Class aptent taciti sociosqu ad litora torquent per conubia
+        nostra, per inceptos himenaeos. Etiam ultricies pellentesque lacinia.
+        Maecenas sit amet finibus diam. Pellentesque pellentesque tellus velit,
+        ac condimentum dui varius at. Praesent in eleifend dolor. Morbi ut purus
+        turpis. Etiam sed libero id orci aliquet blandit. Etiam gravida, quam
+        vel vehicula dictum, lacus massa sollicitudin ex, non auctor risus
+        tellus in orci. Vestibulum molestie orci a tellus aliquet, ac fermentum
+        velit dapibus. Mauris eu justo vestibulum, posuere quam a, pulvinar
+        augue. Donec pellentesque lacus ex, vel posuere purus pharetra molestie.
+        Pellentesque semper neque sed nulla porta, eget finibus tortor blandit.
+        Nulla eu sagittis enim.
+      </p>
+      <p>
+        Donec et odio pharetra, interdum ante ut, tempus odio. Maecenas dolor
+        lorem, fermentum vitae malesuada nec, hendrerit eu dui. Proin at luctus
+        purus. Sed pellentesque velit tempor arcu tempus sagittis. Etiam in
+        bibendum felis. Sed id ante in tellus luctus ornare nec ut nulla.
+        Phasellus pellentesque dolor enim, sed venenatis nunc imperdiet in. Sed
+        pulvinar erat eros, facilisis dignissim purus bibendum eu. Aenean at
+        imperdiet mi, eu semper sapien. Mauris rutrum, risus a vehicula auctor,
+        diam massa rutrum leo, sed fermentum metus tortor lacinia arcu. Aenean
+        orci ante, posuere vel fermentum et, volutpat nec eros. Suspendisse
+        potenti. Sed viverra ipsum vitae ex convallis, et hendrerit nibh tempus.
+        Suspendisse potenti.
+      </p>
+    </div>
+  </body>
+  <script>
+    function turnMode() {
+      const body = document.body;
+      const mode = document.getElementById('mode');
+      const modeName = document.getElementsByClassName('mode-name')[0];
+
+      if (mode.className.includes('light')) {
+        mode.className = 'mode-btn dark';
+        body.style.backgroundColor = '#424242';
+        body.style.color = '#f2f2f2';
+        modeName.innerText = 'Dark';
+      } else {
+        mode.className = 'mode-btn light';
+        body.style.backgroundColor = '#f2f2f2';
+        body.style.color = '#424242';
+        modeName.innerText = 'Light';
+      }
+    }
+  </script>
+</html>

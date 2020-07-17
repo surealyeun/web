@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bellota+Text:wght@300&family=Grenze+Gotisch:wght@500&display=swap');
+/* font-family: 'Abril Fatface', cursive;
+font-family: 'Bellota Text', cursive;
+font-family: 'Grenze Gotisch', cursive; */
+body {
+  background-color: #f2f2f2;
+  font-family: 'Bellota Text', cursive;
+}
+
+header {
+  width: 130px;
+  height: 100vh;
+  display: inline-block;
+  position: fixed;
+  vertical-align: top;
+}
+
+.content {
+  display: inline-block;
+  width: 80%;
+  margin-left: 130px;
+}
+
+.mode-btn {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  margin: 20px;
+}
+
+.mode-name {
+  display: inline-block;
+  margin-left: 40px;
+  margin-top: 20px;
+  writing-mode: vertical-rl;
+}
+
+.light {
+  border-radius: 154px;
+  background: #f2f2f2;
+  box-shadow: 8px 8px 16px #c2c2c2, -8px -8px 16px #ffffff;
+}
+
+.dark {
+  border-radius: 154px;
+  background: #424242;
+  box-shadow: inset 8px 8px 16px #353535, inset -8px -8px 16px #4f4f4f;
+}
