@@ -15,6 +15,13 @@
     </header>
     <div class="content">
       <article class="paragraph">
+        <img
+          class="album-img"
+          src="https://consequenceofsound.net/wp-content/uploads/2015/02/blur-the-magic-whip.jpg?quality=80"
+          alt=""
+          onmouseover="mouseOver(0)"
+          onmouseout="mouseOut(0)"
+        />
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam maximus
         vitae quam nec efficitur. Fusce ut ullamcorper mi. Sed hendrerit metus
         vitae dui lacinia blandit. Donec tempus eu dui ut tristique. Maecenas
@@ -83,21 +90,43 @@
     </div>
   </body>
   <script>
+    function mouseOver(n) {
+      const img = document.getElementsByClassName('album-img')[n];
+      img.style.transform = 'scale(1.05)';
+    }
+    function mouseOut(n) {
+      const img = document.getElementsByClassName('album-img')[n];
+      img.style.transform = 'scale(1)';
+    }
+
     function turnMode() {
       const body = document.body;
       const mode = document.getElementById('mode');
       const modeName = document.getElementsByClassName('mode-name')[0];
+      const para = document.getElementsByClassName('paragraph');
 
       if (mode.className.includes('light')) {
         mode.className = 'mode-btn dark';
         body.style.backgroundColor = '#424242';
         body.style.color = '#f2f2f2';
         modeName.innerText = 'Dark';
+        for (let i = 0; i < para.length; i++) {
+          // console.log(para[i].style);
+          para[i].style.backgroundColor = '#424242';
+          para[i].style.boxShadow =
+            '11px 11px 22px #383838, -11px -11px 22px #4c4c4c';
+        }
       } else {
         mode.className = 'mode-btn light';
         body.style.backgroundColor = '#f2f2f2';
         body.style.color = '#424242';
         modeName.innerText = 'Light';
+        for (let i = 0; i < para.length; i++) {
+          // console.log(para[i].style);
+          para[i].style.backgroundColor = '#f2f2f2';
+          para[i].style.boxShadow =
+            '11px 11px 22px #cecece, -11px -11px 22px #ffffff';
+        }
       }
     }
   </script>

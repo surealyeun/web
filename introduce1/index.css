@@ -16,22 +16,34 @@ header {
 }
 
 .content {
-  display: inline-block;
   width: 80%;
   margin-left: 130px;
+  margin-top: 30px;
   display: flex;
+  flex-wrap: wrap;
+  align-items: inherit;
 }
 
 .paragraph {
-  width: 45%;
-  flex-wrap: wrap;
+  width: 25%;
+  margin: 0 1% 20px 1%;
+  border-radius: 25px;
+  padding: 20px;
+  background: #f2f2f2;
+  box-shadow: 11px 11px 22px #cecece, -11px -11px 22px #ffffff;
+}
+
+.album-img {
+  width: 100%;
+  margin-bottom: 10px;
+  transition: all 0.5s;
 }
 
 .mode-btn {
   display: inline-block;
   width: 80px;
   height: 80px;
-  margin: 20px;
+  margin: 0 20px;
 }
 
 .mode-name {
@@ -51,4 +63,20 @@ header {
   border-radius: 154px;
   background: #424242;
   box-shadow: inset 8px 8px 16px #353535, inset -8px -8px 16px #4f4f4f;
+}
+
+@media (max-width: 976px) {
+  .paragraph {
+    width: 40%;
+    margin: 0 1% 20px 1%;
+  }
+}
+@media (max-width: 764px) {
+  .content {
+    width: 75%;
+  }
+  .paragraph {
+    width: 85%;
+    margin: 0 1% 20px 1%;
+  }
 }
