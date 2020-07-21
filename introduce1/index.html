@@ -14,13 +14,15 @@
       <h1 class="mode-name">Light</h1>
     </header>
     <div class="content">
-      <article class="paragraph">
+      <article
+        class="paragraph"
+        onmouseover="mouseOver(0)"
+        onmouseout="mouseOut(0)"
+      >
         <img
           class="album-img"
           src="https://consequenceofsound.net/wp-content/uploads/2015/02/blur-the-magic-whip.jpg?quality=80"
           alt=""
-          onmouseover="mouseOver(0)"
-          onmouseout="mouseOut(0)"
         />
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam maximus
         vitae quam nec efficitur. Fusce ut ullamcorper mi. Sed hendrerit metus
@@ -32,7 +34,16 @@
         consectetur adipiscing elit. Nullam elit eros, posuere et urna a,
         gravida auctor felis. Aliquam eleifend et nunc vitae feugiat.
       </article>
-      <article class="paragraph">
+      <article
+        class="paragraph"
+        onmouseover="mouseOver(1)"
+        onmouseout="mouseOut(1)"
+      >
+        <img
+          class="album-img"
+          src="https://static.stereogum.com/uploads/2018/03/HONNE_SOMETIMESDAY1-1522331479-compressed.jpg"
+          alt=""
+        />
         Nullam ipsum nulla, suscipit vitae neque in, pharetra rutrum libero.
         Pellentesque consectetur nunc et risus varius, nec sagittis ex aliquam.
         Etiam eget justo suscipit, ultricies lorem at, laoreet tortor. Nunc a
@@ -44,7 +55,16 @@
         fringilla porta neque. Curabitur a ipsum et sem porta finibus sed in
         est.
       </article>
-      <article class="paragraph">
+      <article
+        class="paragraph"
+        onmouseover="mouseOver(2)"
+        onmouseout="mouseOut(2)"
+      >
+        <img
+          class="album-img"
+          src="https://dvqlxo2m2q99q.cloudfront.net/000_clients/446861/page/446861oJA7PVBT.jpg"
+          alt=""
+        />
         Pellentesque urna nisl, luctus vel metus in, tincidunt auctor nulla.
         Cras congue nunc non metus auctor finibus. Sed facilisis dictum est et
         vehicula. Class aptent taciti sociosqu ad litora torquent per conubia
@@ -59,7 +79,16 @@
         Pellentesque semper neque sed nulla porta, eget finibus tortor blandit.
         Nulla eu sagittis enim.
       </article>
-      <article class="paragraph">
+      <article
+        class="paragraph"
+        onmouseover="mouseOver(3)"
+        onmouseout="mouseOut(3)"
+      >
+        <img
+          class="album-img"
+          src="https://fanart.tv/fanart/music/d5f54887-117b-42a1-9aee-8780b84ebaba/albumcover/its-a-beautiful-world-5d93f472e2629.jpg"
+          alt=""
+        />
         Donec et odio pharetra, interdum ante ut, tempus odio. Maecenas dolor
         lorem, fermentum vitae malesuada nec, hendrerit eu dui. Proin at luctus
         purus. Sed pellentesque velit tempor arcu tempus sagittis. Etiam in
@@ -72,7 +101,16 @@
         potenti. Sed viverra ipsum vitae ex convallis, et hendrerit nibh tempus.
         Suspendisse potenti.
       </article>
-      <article class="paragraph">
+      <article
+        class="paragraph"
+        onmouseover="mouseOver(4)"
+        onmouseout="mouseOut(4)"
+      >
+        <img
+          class="album-img"
+          src="https://i.pinimg.com/originals/b2/bd/d3/b2bdd3ad565628e37ba6d3023a2a86a7.jpg"
+          alt=""
+        />
         Pellentesque urna nisl, luctus vel metus in, tincidunt auctor nulla.
         Cras congue nunc non metus auctor finibus. Sed facilisis dictum est et
         vehicula. Class aptent taciti sociosqu ad litora torquent per conubia
@@ -92,7 +130,7 @@
   <script>
     function mouseOver(n) {
       const img = document.getElementsByClassName('album-img')[n];
-      img.style.transform = 'scale(1.05)';
+      img.style.transform = 'scale(1.06)';
     }
     function mouseOut(n) {
       const img = document.getElementsByClassName('album-img')[n];
@@ -104,6 +142,7 @@
       const mode = document.getElementById('mode');
       const modeName = document.getElementsByClassName('mode-name')[0];
       const para = document.getElementsByClassName('paragraph');
+      const album = document.getElementsByClassName('album-img');
 
       if (mode.className.includes('light')) {
         mode.className = 'mode-btn dark';
@@ -116,6 +155,9 @@
           para[i].style.boxShadow =
             '11px 11px 22px #383838, -11px -11px 22px #4c4c4c';
         }
+        for (let i = 0; i < album.length; i++) {
+          album[i].style.boxShadow = '5px 5px 10px #232323';
+        }
       } else {
         mode.className = 'mode-btn light';
         body.style.backgroundColor = '#f2f2f2';
@@ -126,6 +168,9 @@
           para[i].style.backgroundColor = '#f2f2f2';
           para[i].style.boxShadow =
             '11px 11px 22px #cecece, -11px -11px 22px #ffffff';
+        }
+        for (let i = 0; i < album.length; i++) {
+          album[i].style.boxShadow = '5px 5px 10px #bbbbbb';
         }
       }
     }
