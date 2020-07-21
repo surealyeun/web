@@ -13,6 +13,7 @@ header {
   display: inline-block;
   position: fixed;
   vertical-align: top;
+  background-color: unset;
 }
 
 .content {
@@ -37,7 +38,7 @@ header {
   width: 100%;
   margin-bottom: 10px;
   transition: transform 0.7s;
-  box-shadow: 5px 5px 10px #bbbbbb;
+  box-shadow: 5px 5px 10px #c7c7c7;
 }
 
 .mode-btn {
@@ -79,5 +80,35 @@ header {
   .paragraph {
     width: 85%;
     margin: 0 1% 20px 1%;
+  }
+}
+@media (max-width: 400px) {
+  header {
+    width: 100%;
+    height: 120px;
+    background: #f2f2f2;
+    position: fixed;
+    top: 0px;
+    left: 0;
+  }
+  .mode-btn {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    margin: 20px;
+  }
+  .mode-name {
+    display: inline-block;
+    position: absolute;
+    right: 20px;
+    margin: 40px 10px;
+    writing-mode: initial;
+    vertical-align: top;
+    text-align: right;
+  }
+  .content {
+    width: 100%;
+    margin: 20px 0;
+    padding-top: 115px;
   }
 }
