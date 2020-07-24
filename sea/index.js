@@ -1,6 +1,11 @@
 (() => {
   let yOffset = 0;
 
+  let acc = 0.1;
+  let delayedYOffset = 0;
+  let rafState;
+  let rafId;
+
   const info = {
     heightNum: 5,
     scrollHeight: 0,
@@ -36,8 +41,8 @@
   function playAnimation() {
     const objs = info.objs;
     const values = info.values;
-    let sequence = Math.round(calcValues(values.imageSequence, yOffset));
-    objs.context.drawImage(objs.videoImages[sequence], 0, 0);
+    // let sequence = Math.round(calcValues(values.imageSequence, yOffset));
+    // objs.context.drawImage(objs.videoImages[sequence], 0, 0);
   }
 
   function setLayout() {
@@ -47,9 +52,31 @@
     info.objs.canvas.style.transform = `translate3d(-50%, -50%, 0) scale(${heightRatio})`;
   }
 
+  function loop() {
+    delayedYOffset = delayedYOffset + (yOffset - delayedYOffset) * acc;
+    const objs = info.objs;
+    const values = info.values;
+    let sequence = Math.round(calcValues(values.imageSequence, yOffset));
+    if (objs.videoImages[sequence]) {
+      objs.context.drawImage(objs.videoImages[sequence], 0, 0);
+    }
+
+    rafId = requestAnimationFrame(loop);
+
+    if (!Math.abs(yOffset - delayedYOffset) < 1) {
+      cancelAnimationFrame(rafId);
+      rafState = false;
+    }
+  }
+
   window.addEventListener('scroll', () => {
     yOffset = window.pageYOffset;
     playAnimation();
+
+    if (!rafState) {
+      rafId = requestAnimationFrame(loop);
+      rafState = true;
+    }
   });
   window.addEventListener('load', () => {
     setLayout();
