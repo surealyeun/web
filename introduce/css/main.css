@@ -94,7 +94,7 @@ body {
   font-family: 'InfinitySans-BoldA1';
   font-weight: lighter;
   vertical-align: top;
-  margin-left: 1rem;
+  margin-left: 5vw;
   color: white;
   position: relative;
   z-index: 10;
@@ -104,9 +104,10 @@ body {
   margin-left: 2em;
 }
 .summary {
-  font-size: 1rem;
+  font-size: 1.1rem;
   margin-top: 1rem;
   margin-left: 2em;
+  margin-right: 1em;
 }
 #show-section-0 #scroll-section-0 .sticky-elem,
 #show-section-1 #scroll-section-1 .sticky-elem {
@@ -140,31 +141,30 @@ body {
     font-size: 8vh;
     margin-left: 0;
   }
+  .main-message p {
+    bottom: -28vh;
+  }
+  .movie-title {
+    font-size: 3rem;
+    position: relative;
+  }
   .subtitle {
     font-size: 4vh;
     margin-left: 0;
   }
   .soon {
     position: relative;
-    top: 15vh;
+    top: 5vh;
     font-size: 2.5rem;
     text-align: center;
   }
-  .main-message p {
-    bottom: -30vh;
-  }
-  .movie-title {
-    font-size: 3rem;
-    position: relative;
-  }
-
   .posters {
     display: block;
     top: 100vh;
     text-align: center;
   }
   .posters img {
-    width: 80vw;
-    /* margin: 0 auto; */
+    width: 90vw;
+    margin: 1vh 0;
   }
 }
