@@ -1,20 +1,65 @@
 @font-face {
-  font-family: '국립박물관문화재단클래식B';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/국립박물관문화재단클래식B.woff') format('woff');
+  font-family: 'HSBombaram';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/HSBombaram.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'InfinitySans-BoldA1';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/InfinitySans-BoldA1.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
-.scroll-section {
-  border: 1px solid blue;
+body {
+  overflow-x: hidden;
+  background-color: rgb(70, 0, 0);
 }
-.scroll-section h1 {
-  font-size: 9rem;
-  font-family: '국립박물관문화재단클래식B';
-  color: rgba(151, 0, 0, 0.644);
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  background: rgb(66, 0, 0);
+  opacity: 0;
+  transition: 0.5s;
+}
+.before-load .container {
+  display: none;
+}
+.before-load .loading {
+  opacity: 1;
+}
+.title {
+  font-size: 8vw;
+  font-family: 'HSBombaram';
+  font-weight: lighter;
+  color: rgb(255, 255, 255);
+  background-color: rgb(34, 0, 0);
   position: relative;
-  top: 30vh;
-  text-align: center;
+  top: 35vh;
+  display: inline-block;
+  text-align: left;
+  margin-left: 1em;
+  z-index: 10;
+}
+.subtitle {
+  font-size: 2vw;
+  font-family: 'InfinitySans-BoldA1';
+  font-weight: lighter;
+  color: rgb(255, 255, 255);
+  background-color: rgb(34, 0, 0);
+  position: relative;
+  top: 40vh;
+  display: inline-block;
+  text-align: left;
+  margin-left: 4em;
   z-index: 10;
 }
 .sticky-elem {
@@ -26,6 +71,7 @@
 .video-elem {
   top: 0;
   height: 100%;
+  opacity: 1;
 }
 .video-elem video {
   position: absolute;
@@ -33,24 +79,92 @@
   left: 50%;
 }
 .main-message {
-  top: 40vh;
+  top: 45vh;
+}
+.main-message img {
+  /* width: 40vw; */
+  max-height: 100vh;
+  display: inline;
+  position: absolute;
+  top: -45vh;
+  right: 0;
 }
 .main-message p {
-  font-family: '국립박물관문화재단클래식B';
-  font-size: 5rem;
-  text-align: center;
+  display: inline-block;
+  font-family: 'InfinitySans-BoldA1';
+  font-weight: lighter;
+  vertical-align: top;
+  margin-left: 1rem;
+  color: white;
+  position: relative;
+  z-index: 10;
+}
+.movie-title {
+  font-size: 5vw;
+  margin-left: 2em;
+}
+.summary {
+  font-size: 1rem;
+  margin-top: 1rem;
+  margin-left: 2em;
 }
 #show-section-0 #scroll-section-0 .sticky-elem,
 #show-section-1 #scroll-section-1 .sticky-elem {
   display: block;
   /* will-change: transform, opacity; */
 }
+.soon {
+  font-family: 'HSBombaram';
+  font-weight: lighter;
+  font-size: 5vw;
+  text-align: center;
+  position: relative;
+  top: 15vh;
+  color: white;
+}
 .posters {
   display: flex;
   justify-content: space-evenly;
-  margin: 30vh 5vw;
+  align-items: center;
+  position: relative;
+  top: 50%;
+  margin: 0 5vw;
 }
 .posters img {
   width: 25vw;
   /* margin-top: 10vh; */
+}
+
+@media (max-width: 600px) {
+  .title {
+    font-size: 8vh;
+    margin-left: 0;
+  }
+  .subtitle {
+    font-size: 4vh;
+    margin-left: 0;
+  }
+  .soon {
+    position: relative;
+    top: 15vh;
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  .main-message p {
+    bottom: -30vh;
+  }
+  .movie-title {
+    font-size: 3rem;
+    position: relative;
+  }
+
+  .posters {
+    display: block;
+    top: 100vh;
+    text-align: center;
+  }
+  .posters img {
+    width: 80vw;
+    /* margin: 0 auto; */
+  }
 }
