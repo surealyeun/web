@@ -1,5 +1,5 @@
 # web
-반응형으로 작성한 웹 페이지 (html, css, JavaScript)
+반응형으로 작성한 작은 프로젝트들 (html, css, JavaScript)
 
 ## introduce
 스크롤 인터렉션을 이용한 영화 소개 페이지 
