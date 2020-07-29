@@ -4,6 +4,8 @@
 ## introduce
 스크롤 인터렉션을 이용한 영화 소개 페이지 
 <br/>
+![introduce](./images/introduce1.png){:width: "40%" }
+![introduce](./images/introduce2.png){:width: "40%" }
 https://surealyeun.github.io/web/introduce/
 
 ## sea
