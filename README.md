@@ -5,9 +5,9 @@
 스크롤 인터렉션을 이용한 영화 소개 페이지 
 <br/>
 https://surealyeun.github.io/web/introduce/ <br/>
-<img src="./images/introduce1.png" width="33%" >
-<img src="./images/introduce2.png" width="33%" >
-<img src="./images/introduce3.png" width="33%" >
+<img src="./images/introduce1.png" width="30%" >
+<img src="./images/introduce2.png" width="30%" >
+<img src="./images/introduce3.png" width="30%" >
 
 ## sea
 스크롤 인터렉션으로 동영상처럼 보이도록 하는 애니메이션 구현
