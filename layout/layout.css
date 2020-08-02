@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Modak&display=swap');
 
+body {
+  background-color: rgb(240, 240, 240);
+}
 h1 {
   text-align: center;
   margin-top: 40px;
